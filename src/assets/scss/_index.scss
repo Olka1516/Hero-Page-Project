@@ -1,6 +1,6 @@
 @import "./views/main";
 @import "./components/layouts/header";
-@import "./components//hero";
+@import "./components/hero";
 
 @mixin main {
   @include main-component;
