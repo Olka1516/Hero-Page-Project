@@ -1,0 +1,35 @@
+@mixin header-component {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 80px;
+    padding: 37px 182px 0 250px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7456232492997199) 2%,
+      rgba(255, 255, 255, 0) 81%
+    );
+    @media screen and (max-width: 1050px) {
+      padding: 37px;
+    }
+  }
+
+  .header-navs {
+    display: flex;
+    gap: 26px;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 26px;
+    & button {
+      text-transform: uppercase;
+    }
+  }
+
+  .header-logo {
+    height: 62px;
+  }
+}

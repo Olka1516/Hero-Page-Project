@@ -1,0 +1,15 @@
+@import "./views/main";
+@import "./components/layouts/header";
+@import "./components//hero";
+
+@mixin main {
+  @include main-component;
+}
+
+@mixin header {
+  @include header-component;
+}
+
+@mixin hero {
+  @include hero-component;
+}
