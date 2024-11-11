@@ -1,0 +1,54 @@
+@mixin romb-text {
+  .romb-text {
+    position: relative;
+    border-top: #888 2px solid;
+    border-bottom: #888 2px solid;
+    padding: 14px 24px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 37px;
+      height: 38.5px;
+      top: 50%;
+    }
+    &::before {
+      border-bottom: #888 solid 2px;
+      border-left: #888 solid 2px;
+      transform: translate(-49%, -50%) rotate(45deg);
+      left: 0;
+    }
+    &::after {
+      border-top: #888 solid 2px;
+      border-right: #888 solid 2px;
+      transform: translate(50%, -49%) rotate(45deg);
+      right: 0;
+    }
+  }
+
+  .text-cube {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: #fff 2px solid;
+    &.left {
+      left: -23px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &.right {
+      transform: translate(50%, -50%) rotate(45deg);
+      right: -23px;
+    }
+  }
+
+  .text-content {
+    background-color: #888888;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 22px;
+    @media screen and (max-width: 750px) {
+      font-size: 22px;
+    }
+  }
+}

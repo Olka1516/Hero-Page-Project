@@ -1,6 +1,10 @@
 @import "./views/main";
 @import "./components/layouts/header";
 @import "./components/hero";
+@import "./components/games/gamesMain";
+@import "./components/games/gamesStory";
+@import "./components/games/games";
+@import "./general/textRomb";
 
 @mixin main {
   @include main-component;
@@ -12,4 +16,20 @@
 
 @mixin hero {
   @include hero-component;
+  @include romb-text;
+}
+
+@mixin games-page {
+  @include games-main-page;
+  @include games;
+}
+
+@mixin games-main {
+  @include romb-text;
+  @include games-main-component;
+}
+
+@mixin games-story {
+  @include games;
+  @include games-story-component;
 }
