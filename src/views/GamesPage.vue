@@ -14,6 +14,13 @@
       />
       <AppHeader></AppHeader>
       <MainBlock></MainBlock>
+      <div class="games-clouds-container">
+        <img
+          class="games-clouds"
+          src="../assets/images/games_clouds.png"
+          alt=""
+        />
+      </div>
       <StoryBlock></StoryBlock>
     </div>
   </div>
@@ -33,14 +40,14 @@ const handleScroll = () => {
     element.value.style.transform = `rotate(${document.body.scrollTop / 8}deg)`;
 };
 
-onMounted(() => {
-  element.value = document.getElementById("gamesCircle");
-  document.body.addEventListener("scroll", handleScroll);
-});
+// onMounted(() => {
+//   element.value = document.getElementById("gamesCircle");
+//   document.body.addEventListener("scroll", handleScroll);
+// });
 
-onUnmounted(() => {
-  document.body.removeEventListener("scroll", handleScroll);
-});
+// onUnmounted(() => {
+//   document.body.removeEventListener("scroll", handleScroll);
+// });
 </script>
 
 <style scoped lang="scss">

@@ -11,8 +11,6 @@
 
 @mixin games-main-component {
   .games-content {
-    position: relative;
-    z-index: 9;
     height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -23,9 +21,6 @@
 
     & h1 {
       font-size: 80px;
-    }
-    & h2 {
-      font-size: 40px;
     }
   }
 
