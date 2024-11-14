@@ -4,6 +4,7 @@
 @import "./components/games/gamesMain";
 @import "./components/games/gamesStory";
 @import "./components/games/games";
+@import "./components/games/gamesClouds";
 @import "./general/textRomb";
 
 @mixin main {
@@ -32,4 +33,8 @@
 @mixin games-story {
   @include games;
   @include games-story-component;
+}
+
+@mixin games-clouds {
+  @include games-clouds-container;
 }

@@ -1,7 +1,7 @@
 @mixin games-story-component {
   .games-container {
     padding-inline: 140px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     display: flex;
     align-items: end;
   }
@@ -16,10 +16,16 @@
 
   .game-story {
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
     & img {
       width: 350px;
       height: 200px;
       object-fit: cover;
+      transition: all 0.7s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     & h3 {

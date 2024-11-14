@@ -2,11 +2,11 @@
   <div
     class="games-container"
     :style="{
-      '--background': `url(${backgroundImage})`,
+      '--background': `url(${props.image})`,
     }"
   >
     <div class="games-content">
-      <h2>Story</h2>
+      <h2>{{ title }}</h2>
       <div class="games-story">
         <div v-for="data in story" class="game-story">
           <img :src="data.image[0]" alt="" />
@@ -18,8 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import backgroundImage from "@/assets/images/games_bg.jpg";
-import { story } from "@/constants";
+import { IStory } from "@/types";
+
+const props = defineProps<{ image: string; title: string; story: IStory[] }>();
 </script>
 
 <style scoped lang="scss">
