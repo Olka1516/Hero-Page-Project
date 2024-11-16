@@ -22,6 +22,10 @@
           :image="story.image"
         ></StoryBlock>
       </template>
+      <GamesClouds />
+      <GamesTimeline :image="backgroundImage" />
+      <GamesClouds />
+      <GamesCommunity :image="backgroundImage" />
     </div>
   </div>
 </template>
@@ -35,6 +39,8 @@ import AppHeader from "@/components/layout/AppHeader.vue";
 import MainBlock from "@/components/games/GamesMainBlock.vue";
 import StoryBlock from "@/components/games/GamesStory.vue";
 import GamesClouds from "@/components/games/GamesClouds.vue";
+import GamesTimeline from "@/components/games/GamesTimeline.vue";
+import GamesCommunity from "@/components/games/GamesCommunity.vue";
 import { story, openWorld, monsterHunter } from "@/constants";
 import { onMounted, onUnmounted, Ref, ref } from "vue";
 
@@ -50,8 +56,11 @@ const stories = [
 ];
 
 const handleScroll = () => {
-  if (element.value)
+  if (element.value) {
     element.value.style.transform = `rotate(${document.body.scrollTop / 8}deg)`;
+    if (document.body.scrollTop >= 3700) element.value.style.opacity = "0.2";
+    else element.value.style.opacity = "0.4";
+  }
 };
 
 onMounted(() => {
