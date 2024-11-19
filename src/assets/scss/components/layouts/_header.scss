@@ -24,12 +24,13 @@
   .header-nav {
     display: flex;
     gap: 26px;
-    & button {
+    & a {
       text-transform: uppercase;
     }
   }
 
   .header-logo {
     height: 62px;
+    cursor: pointer;
   }
 }

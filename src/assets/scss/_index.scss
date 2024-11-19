@@ -1,6 +1,14 @@
 @import "./views/main";
 @import "./components/layouts/header";
 @import "./components/hero";
+@import "./components/games/gamesMain";
+@import "./components/games/gamesStory";
+@import "./components/games/games";
+@import "./components/games/gamesClouds";
+@import "./components/games/gamesTimeline";
+@import "./components/games/gamesCommunity";
+@import "./general/textRomb";
+@import "./general/navsRomb";
 
 @mixin main {
   @include main-component;
@@ -12,4 +20,35 @@
 
 @mixin hero {
   @include hero-component;
+  @include romb-text;
+}
+
+@mixin games-page {
+  @include games-main-page;
+  @include games;
+  @include navs-romb;
+}
+
+@mixin games-main {
+  @include romb-text;
+  @include games-main-component;
+}
+
+@mixin games-story {
+  @include games;
+  @include games-story-component;
+}
+
+@mixin games-clouds {
+  @include games-clouds-container;
+}
+
+@mixin games-timeline {
+  @include games;
+  @include games-timeline-component;
+}
+
+@mixin games-community {
+  @include games;
+  @include games-community-component;
 }

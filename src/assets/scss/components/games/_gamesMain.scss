@@ -1,0 +1,57 @@
+@mixin games-main-page {
+  .games-circle {
+    position: fixed;
+    z-index: 1;
+    top: -45%;
+    left: -15%;
+    width: 800px;
+    opacity: 0.4;
+  }
+
+  .games-navs {
+    position: fixed;
+    z-index: 11;
+    right: 5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    transition: all 0.5s ease;
+    background-color: var(--bg);
+    & span {
+      cursor: pointer;
+      border: 1px solid #fff;
+      background-color: #fff;
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      transition: all 1.2s ease;
+    }
+    & .active-nav {
+      background-color: transparent;
+      transform: rotate(45deg) scale(2);
+    }
+  }
+}
+
+@mixin games-main-component {
+  .games-content {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 100px 150px;
+
+    & h1 {
+      font-size: 80px;
+    }
+  }
+
+  .games-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+}

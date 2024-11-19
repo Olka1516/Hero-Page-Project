@@ -1,0 +1,41 @@
+@mixin games-story-component {
+  .games-container {
+    padding-inline: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: end;
+  }
+
+  .games-story {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    column-gap: 16px;
+    row-gap: 14px;
+  }
+
+  .game-story {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    & img {
+      width: 350px;
+      height: 200px;
+      object-fit: cover;
+      transition: all 0.7s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    & h3 {
+      text-align: center;
+      position: absolute;
+      bottom: 18px;
+      border-bottom: 1px solid #888;
+      width: 100%;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}

@@ -2,10 +2,10 @@
   <div class="hero-content" :class="{ reverse: props.count & 1 }">
     <img class="hero-image" :src="`${data.image}`" alt="" />
     <div class="hero-block">
-      <div class="hero-name-container">
-        <div class="hero-cube left"></div>
-        <h1 class="hero-name">{{ data.name }}</h1>
-        <div class="hero-cube right"></div>
+      <div class="romb-text">
+        <div class="text-cube left"></div>
+        <h1 class="text-content">{{ data.name }}</h1>
+        <div class="text-cube right"></div>
       </div>
       <h2 class="hero-quote"><span>"</span>{{ data.quote }}<span>"</span></h2>
       <div class="hero-info">
