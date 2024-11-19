@@ -1,0 +1,28 @@
+@mixin base-selector-component {
+  h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+  }
+
+  .selector {
+    position: relative;
+  }
+
+  .selector-options {
+    min-width: 300px;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 22px;
+    background-color: #262626e9;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    z-index: 11;
+  }
+}

@@ -16,7 +16,12 @@ const router = createRouter({
     {
       path: "/games",
       name: "games",
-      component: () => import("../views/GamesPage.vue"),
+      children: [
+        {
+          path: "witcher-3",
+          component: () => import("../views/GamesPage.vue"),
+        },
+      ],
     },
   ],
 });

@@ -1,7 +1,7 @@
 @mixin games-main-page {
   .games-circle {
     position: fixed;
-    z-index: 1;
+    z-index: 0;
     top: -45%;
     left: -15%;
     width: 800px;
