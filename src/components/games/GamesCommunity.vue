@@ -20,12 +20,18 @@
           the details.
         </p>
       </div>
-      <div></div>
+      <div class="games-imgs">
+        <div v-for="data in dataImgs" class="games-img">
+          <img :src="data.url" alt="" />
+          <h3>{{ data.title }}</h3>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { dataImgs } from "@/constants/gamesCommunity";
 const props = defineProps<{ image: string }>();
 </script>
 

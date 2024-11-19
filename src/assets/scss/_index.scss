@@ -8,6 +8,7 @@
 @import "./components/games/gamesTimeline";
 @import "./components/games/gamesCommunity";
 @import "./general/textRomb";
+@import "./general/navsRomb";
 
 @mixin main {
   @include main-component;
@@ -25,6 +26,7 @@
 @mixin games-page {
   @include games-main-page;
   @include games;
+  @include navs-romb;
 }
 
 @mixin games-main {
