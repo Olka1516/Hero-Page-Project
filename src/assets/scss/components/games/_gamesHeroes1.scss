@@ -1,0 +1,21 @@
+@mixin heroes-witcher1-component {
+  .games-container {
+    position: relative;
+    margin-top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .games-heroes {
+    position: absolute;
+    top: -12px;
+    transition: all 0.5s ease;
+    & .romb-text {
+      bottom: 20px;
+      left: 200px;
+      position: absolute;
+      width: fit-content;
+    }
+  }
+}

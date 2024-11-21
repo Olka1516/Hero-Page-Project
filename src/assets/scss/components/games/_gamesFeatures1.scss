@@ -1,0 +1,41 @@
+@mixin features-witcher1-component {
+  .games-container {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .features-img {
+    width: 900px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .features-texts {
+    position: absolute;
+    top: 480px;
+    z-index: -1;
+    width: 700px;
+    background-color: #414141c6;
+    padding: 36px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & h3 {
+      font-size: 24px;
+    }
+  }
+}
