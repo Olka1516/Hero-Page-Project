@@ -8,9 +8,11 @@
 @import "./components/games/gamesTimeline";
 @import "./components/games/gamesCommunity";
 @import "./components/games/gamesStory1";
+@import "./components/games/gamesStory2";
 @import "./components/games/gamesHero1";
 @import "./components/games/gamesHeroes1";
 @import "./components/games/gamesFeatures1";
+@import "./components/games/gamesMain2";
 @import "./components/baseSelector";
 @import "./general/textRomb";
 @import "./general/navsRomb";
@@ -39,6 +41,11 @@
   @include games-main-component;
 }
 
+@mixin games-main-witcher2 {
+  @include romb-text;
+  @include main-witcher2-component;
+}
+
 @mixin games-story {
   @include games;
   @include games-story-component;
@@ -61,6 +68,11 @@
 @mixin games-story-witcher1 {
   @include games;
   @include story-witcher1-component;
+}
+
+@mixin games-story-witcher2 {
+  @include games;
+  @include story-witcher2-component;
 }
 
 @mixin games-hero-witcher1 {

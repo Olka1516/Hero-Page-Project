@@ -1,0 +1,21 @@
+@mixin main-witcher2-component {
+  .main-container {
+    padding-top: 130px;
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: #000 1px 0 10px;
+  }
+  h2 {
+    text-shadow: #000 1px 0 10px;
+    font-size: 75px;
+    font-weight: 900;
+  }
+}

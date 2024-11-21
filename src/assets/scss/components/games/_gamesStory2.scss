@@ -1,0 +1,52 @@
+@mixin story-witcher2-component {
+  .games-container {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .story-content {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .story-img {
+    border-radius: 12px;
+  }
+
+  .story-detailed {
+    padding: 26px;
+    width: 400px;
+    height: 350px;
+    background-color: #414141c6;
+    border-radius: 12px;
+  }
+
+  .story-detailed-inner {
+    // margin: 24px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & p {
+      line-height: 36px;
+    }
+  }
+
+  h2 {
+    text-shadow: #000 1px 0 10px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  h3 {
+    text-shadow: #000 1px 0 10px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+}

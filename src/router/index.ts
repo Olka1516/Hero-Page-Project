@@ -18,12 +18,16 @@ const router = createRouter({
       name: "games",
       children: [
         {
-          path: "witcher-3",
-          component: () => import("../views/GamesPage.vue"),
-        },
-        {
           path: "witcher-1",
           component: () => import("../views/GamesWitcher1.vue"),
+        },
+        {
+          path: "witcher-2",
+          component: () => import("../views/GamesWitcher2.vue"),
+        },
+        {
+          path: "witcher-3",
+          component: () => import("../views/GamesWitcher3.vue"),
         },
       ],
     },
