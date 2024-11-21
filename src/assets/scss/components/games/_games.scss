@@ -8,6 +8,10 @@
     background-position: center;
   }
 
+  .parallax {
+    background-attachment: fixed;
+  }
+
   .games-content {
     position: relative;
     z-index: 9;

@@ -1,0 +1,41 @@
+@mixin hero-witcher1-component {
+  .hero-content {
+    display: flex;
+  }
+  .story-img {
+    opacity: 0.9;
+    width: 900px;
+  }
+
+  .hero-texts {
+    background-color: #cdcdcd44;
+    margin: 100px 160px 0 0;
+    padding: 36px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 500px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .hero-quotes {
+    color: #000;
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  .hero-text {
+    color: #000;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #000;
+  }
+}
