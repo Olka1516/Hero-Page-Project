@@ -6,11 +6,16 @@
 @import "./components/games/games";
 @import "./components/games/gamesClouds";
 @import "./components/games/gamesTimeline";
+@import "./components/games/gamesTimeline2";
 @import "./components/games/gamesCommunity";
 @import "./components/games/gamesStory1";
+@import "./components/games/gamesStory2";
 @import "./components/games/gamesHero1";
+@import "./components/games/gamesHero2";
 @import "./components/games/gamesHeroes1";
 @import "./components/games/gamesFeatures1";
+@import "./components/games/gamesMain2";
+@import "./components/games/gamesNews2";
 @import "./components/baseSelector";
 @import "./general/textRomb";
 @import "./general/navsRomb";
@@ -39,6 +44,11 @@
   @include games-main-component;
 }
 
+@mixin games-main-witcher2 {
+  @include romb-text;
+  @include main-witcher2-component;
+}
+
 @mixin games-story {
   @include games;
   @include games-story-component;
@@ -53,6 +63,11 @@
   @include games-timeline-component;
 }
 
+@mixin games-timeline2 {
+  @include games-timeline;
+  @include games-timeline2-component;
+}
+
 @mixin games-community {
   @include games;
   @include games-community-component;
@@ -63,21 +78,36 @@
   @include story-witcher1-component;
 }
 
+@mixin games-story-witcher2 {
+  @include games;
+  @include story-witcher2-component;
+}
+
 @mixin games-hero-witcher1 {
   @include games;
   @include hero-witcher1-component;
 }
 
-@mixin games-heroes-witcher1 {
+@mixin games-hero-witcher2 {
+  @include games-hero-witcher1;
+  @include hero-witcher2-component;
+}
+
+@mixin games-heroes {
   @include games;
   @include romb-text;
-  @include heroes-witcher1-component;
+  @include heroes-component;
 }
 
 @mixin games-features-witcher1 {
   @include games;
   @include romb-text;
   @include features-witcher1-component;
+}
+
+@mixin games-news-witcher2 {
+  @include romb-text;
+  @include news-witcher2-component;
 }
 
 @mixin base-selector {

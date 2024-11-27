@@ -2,15 +2,21 @@
   <div
     class="games-container"
     :style="{
-      '--background': `url(${backgroundImage})`,
+      '--background': `url(${background})`,
     }"
   >
     <div
       class="games-heroes"
-      v-for="(hero, index) in heroes1"
+      :class="{ 'games-witcher1': isWitcher1 }"
+      v-for="(hero, index) in heroes"
       :style="getHeroStyle(heroesIndex[index])"
     >
-      <img :src="hero.image" alt="" @click="changeIndex(heroesIndex[index])" />
+      <img
+        :src="hero.image"
+        alt=""
+        @click="changeIndex(heroesIndex[index])"
+        :class="{ 'witcher1-img': isWitcher1 }"
+      />
       <div class="romb-text">
         <div class="text-cube left"></div>
         <p class="text-content">{{ hero.title }}</p>
@@ -21,14 +27,24 @@
 </template>
 
 <script setup lang="ts">
-import backgroundImage from "@/assets/images/games_bg_2.jpg";
-import { heroes1 } from "@/constants";
 import { ref } from "vue";
 
-const heroesIndex = ref([0, 1, 2]);
+const props = defineProps<{
+  heroes: {
+    id: number;
+    image: string;
+    title: string;
+  }[];
+  background: string;
+  isWitcher1?: boolean;
+}>();
+
+const heroesIndex = ref(
+  Array.from({ length: props.heroes.length }, (_, i) => i)
+);
 
 const getHeroStyle = (index: number) => {
-  const scale = 1 - Math.abs(index) * 0.1;
+  const scale = 1 - Math.abs(index) * 0.18;
   const translateX = index * 380;
   const zIndex = 100 - Math.abs(index);
   const opacity = 1 - Math.abs(index) * 0.1;
@@ -36,7 +52,7 @@ const getHeroStyle = (index: number) => {
   return {
     transform: `translateX(${translateX}px) scale(${scale})`,
     zIndex: zIndex,
-    opacity: opacity > 0 ? opacity : 0,
+    opacity: opacity,
   };
 };
 
@@ -50,5 +66,5 @@ const changeIndex = (index: number) => {
 
 <style scoped lang="scss">
 @use "@/assets/scss/index";
-@include index.games-heroes-witcher1;
+@include index.games-heroes;
 </style>

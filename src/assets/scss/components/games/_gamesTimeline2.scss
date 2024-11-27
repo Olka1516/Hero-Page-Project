@@ -1,0 +1,35 @@
+@mixin games-timeline2-component {
+  .timeline-content {
+    padding: 0;
+  }
+
+  .games-timeline {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 70px;
+  }
+
+  .games-timeline-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .games-times {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  h2,
+  h3,
+  p {
+    color: #fff;
+  }
+
+  .games-box {
+    border-color: #fff;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin hero-witcher2-component {
+  .hero-content {
+    padding-top: 30px;
+    margin-inline: 200px;
+  }
+
+  .hero-texts {
+    margin: 250px 0 0;
+    height: 300px;
+  }
+
+  .hero-img {
+    opacity: 1;
+    width: 900px;
+  }
+}

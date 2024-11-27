@@ -6,7 +6,7 @@
     }"
   >
     <div class="hero-content">
-      <img class="story-img" src="@/assets/images/games_hero1.png" alt="" />
+      <img class="hero-img" src="@/assets/images/games_hero1.png" alt="" />
       <div class="hero-texts">
         <h2>Hero</h2>
         <p class="hero-quotes">

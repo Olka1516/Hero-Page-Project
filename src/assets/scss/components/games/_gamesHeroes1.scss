@@ -1,4 +1,4 @@
-@mixin heroes-witcher1-component {
+@mixin heroes-component {
   .games-container {
     position: relative;
     margin-top: 220px;
@@ -17,5 +17,15 @@
       position: absolute;
       width: fit-content;
     }
+    & .witcher1-img {
+      width: 442px;
+      height: 503px;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .games-witcher1 {
+    top: 20%;
   }
 }
