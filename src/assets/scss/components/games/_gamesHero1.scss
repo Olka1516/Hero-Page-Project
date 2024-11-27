@@ -2,15 +2,15 @@
   .hero-content {
     display: flex;
   }
-  .story-img {
+  .hero-img {
     opacity: 0.9;
     width: 900px;
   }
 
   .hero-texts {
-    background-color: #cdcdcd44;
     margin: 100px 160px 0 0;
     padding: 36px;
+    background-color: #cdcdcd44;
     border-radius: 12px;
     display: flex;
     flex-direction: column;

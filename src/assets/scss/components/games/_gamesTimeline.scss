@@ -23,11 +23,16 @@
     height: 100vh;
   }
 
-  .games-content {
+  .timeline-content {
     padding: 150px 0 0 150px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative;
+    z-index: 9;
+    & h2 {
+      font-size: 40px;
+    }
     & h3 {
       font-size: 30px;
     }
@@ -36,7 +41,7 @@
   .games-timeline {
     padding: 5px;
     display: flex;
-    overflow-y: auto;
+    overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;
     }

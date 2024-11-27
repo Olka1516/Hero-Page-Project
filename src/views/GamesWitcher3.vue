@@ -22,16 +22,16 @@
       <AppHeader></AppHeader>
       <MainBlock></MainBlock>
       <template v-for="story in stories">
-        <GamesClouds />
+        <GamesClouds top="-100" />
         <StoryBlock
           :story="story.story"
           :title="story.title"
           :image="story.image"
         ></StoryBlock>
       </template>
-      <GamesClouds />
+      <GamesClouds top="-100" />
       <GamesTimeline :image="backgroundImage" />
-      <GamesClouds />
+      <GamesClouds top="-100" />
       <GamesCommunity :image="backgroundImage" />
     </div>
   </div>
@@ -102,4 +102,5 @@ onUnmounted(() => {
 <style scoped lang="scss">
 @use "@/assets/scss/index";
 @include index.games-page;
+@include index.games-timeline;
 </style>
