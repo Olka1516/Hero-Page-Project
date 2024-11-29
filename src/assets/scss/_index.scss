@@ -1,5 +1,7 @@
+@import "./views/heroes";
 @import "./views/main";
 @import "./components/layouts/header";
+@import "./components/layouts/footer";
 @import "./components/hero";
 @import "./components/games/gamesMain";
 @import "./components/games/gamesStory";
@@ -16,6 +18,11 @@
 @import "./components/games/gamesFeatures1";
 @import "./components/games/gamesMain2";
 @import "./components/games/gamesNews2";
+@import "./components/main/mainNews";
+@import "./components/main/mainWelcome";
+@import "./components/main/mainGames";
+@import "./components/main/mainDiscover";
+@import "./components/main/mainForm";
 @import "./components/baseSelector";
 @import "./general/textRomb";
 @import "./general/navsRomb";
@@ -24,8 +31,39 @@
   @include main-component;
 }
 
+@mixin main-news {
+  @include romb-text;
+  @include main-news-component;
+}
+
+@mixin main-welcome {
+  @include main-welcome-component;
+}
+
+@mixin main-games {
+  @include main-games-component;
+}
+
+@mixin main-discover {
+  @include romb-text;
+  @include main-discover-component;
+}
+
+@mixin main-form {
+  @include romb-text;
+  @include main-form-component;
+}
+
+@mixin heroes {
+  @include heroes-component;
+}
+
 @mixin header {
   @include header-component;
+}
+
+@mixin footer {
+  @include footer-component;
 }
 
 @mixin hero {

@@ -1,0 +1,49 @@
+@mixin main-form-component {
+  .form-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  h1,
+  h2 {
+    color: #000;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+
+  .info-content {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+  }
+
+  .info {
+    width: 550px;
+    color: #565656;
+  }
+
+  span {
+    cursor: pointer;
+    border: 2px solid #fff;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    transition: all 1.2s ease;
+    &.active {
+      background-color: #fff;
+      transform: rotate(45deg) scale(1.2);
+    }
+  }
+}
