@@ -1,0 +1,61 @@
+@mixin main-news-component {
+  .news-container {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .main-news {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 26px;
+  }
+
+  .main-new {
+    position: relative;
+    cursor: pointer;
+    & h3 {
+      text-align: center;
+      position: absolute;
+      bottom: 42px;
+      border-bottom: 1px solid #888;
+      width: 100%;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    & p {
+      margin-top: 8px;
+      color: #404040;
+    }
+  }
+
+  .main-img-container {
+    width: 100%;
+    height: calc(100% - 20px);
+    overflow: hidden;
+    position: relative;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.7s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .large-block {
+    grid-row: 1 / span 2;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: #000;
+    font-weight: 900;
+  }
+}

@@ -1,0 +1,54 @@
+@mixin main-welcome-component {
+  .main-welcome {
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 46px;
+  }
+
+  .main-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 600px;
+  }
+
+  .main-quotes {
+    background-color: #7575751c;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .main-quote {
+    display: flex;
+    align-items: center;
+    & img {
+      width: 160px;
+      filter: hue-rotate(-20deg);
+    }
+    & :last-child {
+      transform: rotateY(3.142rad);
+    }
+  }
+
+  h1,
+  p,
+  h2,
+  b {
+    color: #000;
+  }
+
+  h1 {
+    font-size: 46px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}

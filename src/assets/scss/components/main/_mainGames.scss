@@ -1,0 +1,69 @@
+@mixin main-games-component {
+  .games-container {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .games-navs {
+    display: flex;
+    gap: 46px;
+    border-bottom: #000 solid 1px;
+    & button {
+      padding: 4px 12px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      font-size: 22px;
+      color: #000;
+      font-weight: 100;
+      border-bottom: transparent solid 2px;
+    }
+    & .active {
+      border-bottom: #000 solid 2px;
+    }
+  }
+
+  .games-content {
+    border: #000 solid 1px;
+    padding: 4px;
+  }
+
+  .games-inner {
+    padding: 4px;
+    display: flex;
+    background-color: #000;
+  }
+
+  .games-element {
+    position: relative;
+    height: 525px;
+    cursor: pointer;
+    overflow: hidden;
+    & img {
+      object-fit: cover;
+      width: 400px;
+      height: 525px;
+      transition: all 0.7s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    & h3 {
+      text-align: center;
+      position: absolute;
+      bottom: 18px;
+      border-bottom: 1px solid #888;
+      width: 100%;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  h1 {
+    color: #000;
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
