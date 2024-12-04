@@ -32,7 +32,7 @@ import Selector from "../BaseSelector.vue";
 import router from "@/router";
 import { ref } from "vue";
 
-const navs = ref(["games", "forum", "jobs", "support", "contact & legal"]);
+const navs = ref(["games", "bestiary", "heroes", "support", "contact & legal"]);
 const options = ref([
   "The Witcher 1: Enhanced Edition",
   "The Witcher 2: Assassins of Kings",

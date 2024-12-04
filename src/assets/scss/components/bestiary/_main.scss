@@ -1,0 +1,136 @@
+@mixin bestiary-main-component {
+  .bestiary-container {
+    display: flex;
+    justify-content: center;
+    padding-inline: 20px;
+    padding-top: 20px;
+  }
+
+  .bestiary-asset {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img {
+      width: 500px;
+    }
+  }
+
+  .bestiary-asset-inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    width: 100%;
+    & span {
+      padding-inline: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .bestiary-description,
+  .bestiary-select {
+    padding: 26px;
+    width: 400px;
+    height: 500px;
+    background-color: #41414161;
+    border-radius: 12px;
+  }
+
+  .bestiary-description-inner,
+  .bestiary-select-inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .bestiary-description-inner {
+    & p {
+      line-height: 28px;
+    }
+    & h2 {
+      font-size: 30px;
+    }
+    & hr {
+      margin: 8px 0;
+    }
+  }
+
+  .bestiary-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & h2 {
+      font-size: 20px;
+      font-weight: 900;
+    }
+  }
+
+  .bestiary-bestie-container {
+    margin: 0 12px;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 200ms;
+
+    &.active {
+      grid-template-rows: 1fr;
+      & .bestiary-bestie-btn {
+        padding: 6px 0;
+        min-height: 0;
+      }
+    }
+  }
+
+  .bestiary-bestie-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+  }
+
+  .bestiary-bestie-btn {
+    font-weight: 300;
+  }
+
+  .bestiary-accordion {
+    cursor: pointer;
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #424242;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & img {
+      transition: all 0.3s linear;
+    }
+    & img.active {
+      transform: rotate(90deg);
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    width: 500px;
+    position: absolute;
+    transition: all 1s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+    transform: scale(0);
+    filter: blur(5px);
+  }
+
+  .fade-enter-to,
+  .fade-leave-from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}

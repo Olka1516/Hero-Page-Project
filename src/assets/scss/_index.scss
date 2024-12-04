@@ -1,5 +1,6 @@
 @import "./views/heroes";
 @import "./views/main";
+@import "./views/bestiary";
 @import "./components/layouts/header";
 @import "./components/layouts/footer";
 @import "./components/hero";
@@ -23,6 +24,7 @@
 @import "./components/main/mainGames";
 @import "./components/main/mainDiscover";
 @import "./components/main/mainForm";
+@import "./components/bestiary/main";
 @import "./components/baseSelector";
 @import "./general/textRomb";
 @import "./general/navsRomb";
@@ -52,6 +54,14 @@
 @mixin main-form {
   @include romb-text;
   @include main-form-component;
+}
+
+@mixin bestiary-main {
+  @include bestiary-main-component;
+}
+
+@mixin bestiary {
+  @include bestiary-component;
 }
 
 @mixin heroes {
@@ -134,7 +144,7 @@
 @mixin games-heroes {
   @include games;
   @include romb-text;
-  @include heroes-component;
+  @include heroes1-component;
 }
 
 @mixin games-features-witcher1 {
